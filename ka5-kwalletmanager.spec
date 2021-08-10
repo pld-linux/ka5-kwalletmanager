@@ -52,6 +52,12 @@ using the KDE wallet subsystem it not only allows you to keep your own
 secrets but also to access and manage the passwords of every
 application that integrates with the wallet.
 
+%description -l pl.UTF-8
+KWalletManager to narzędzie do zarządzania hasłami na Twoim systemie.
+Używanie podsystemu portfela KDE, nie tylko pozwala Ci trzymać Twoje
+sekretu, ale też zarządzać hasłami przez każdą aplikację, która się
+z nim integruje.
+
 %prep
 %setup -q -n %{kaname}-%{version}
 
