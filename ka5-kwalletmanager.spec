@@ -1,18 +1,18 @@
 #
 # Conditional build:
 %bcond_with	tests		# build with tests
-%define		kdeappsver	21.12.3
+%define		kdeappsver	22.04.0
 %define		kframever	5.56.0
 %define		qtver		5.9.0
 %define		kaname		kwalletmanager
 Summary:	kwallet manager
 Name:		ka5-%{kaname}
-Version:	21.12.3
+Version:	22.04.0
 Release:	1
 License:	GPL v2+/LGPL v2.1+
 Group:		X11/Applications
 Source0:	http://download.kde.org/stable/release-service/%{kdeappsver}/src/%{kaname}-%{version}.tar.xz
-# Source0-md5:	31d134b5bb8acb80613947c953de21c1
+# Source0-md5:	7e2678e0b6e87e99811cd30fa38e8c78
 URL:		http://www.kde.org/
 BuildRequires:	Qt5Core-devel
 BuildRequires:	Qt5Core-devel >= %{qtver}
@@ -56,10 +56,10 @@ secrets but also to access and manage the passwords of every
 application that integrates with the wallet.
 
 %description -l pl.UTF-8
-KWalletManager to narzędzie do zarządzania hasłami na Twoim systemie.
-Używanie podsystemu portfela KDE, nie tylko pozwala Ci trzymać Twoje
-sekretu, ale też zarządzać hasłami przez każdą aplikację, która się
-z nim integruje.
+KWalletManager to narzędzie do zarządzania hasłami na Twoim
+systemie. Używanie podsystemu portfela KDE, nie tylko pozwala Ci
+trzymać Twoje sekretu, ale też zarządzać hasłami przez każdą
+aplikację, która się z nim integruje.
 
 %prep
 %setup -q -n %{kaname}-%{version}
@@ -113,8 +113,8 @@ rm -rf $RPM_BUILD_ROOT
 %{_iconsdir}/hicolor/64x64/apps/kwalletmanager2.png
 %{_datadir}/kservices5/kwalletconfig5.desktop
 %{_datadir}/kservices5/kwalletmanager5_show.desktop
-%{_datadir}/kxmlgui5/kwalletmanager5
 %{_datadir}/metainfo/org.kde.kwalletmanager5.appdata.xml
 %{_datadir}/polkit-1/actions/org.kde.kcontrol.kcmkwallet5.policy
 %{_datadir}/dbus-1/system.d/org.kde.kcontrol.kcmkwallet5.conf
 %{_datadir}/qlogging-categories5/kwalletmanager.categories
+%{_datadir}/dbus-1/services/org.kde.kwalletmanager5.service
