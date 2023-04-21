@@ -1,18 +1,18 @@
 #
 # Conditional build:
 %bcond_with	tests		# build with tests
-%define		kdeappsver	22.12.3
+%define		kdeappsver	23.04.0
 %define		kframever	5.94.0
 %define		qtver		5.15.2
 %define		kaname		kwalletmanager
 Summary:	kwallet manager
 Name:		ka5-%{kaname}
-Version:	22.12.3
-Release:	2
+Version:	23.04.0
+Release:	1
 License:	GPL v2+/LGPL v2.1+
 Group:		X11/Applications
 Source0:	https://download.kde.org/stable/release-service/%{kdeappsver}/src/%{kaname}-%{version}.tar.xz
-# Source0-md5:	da76f7199f01a32b87c215781ae07739
+# Source0-md5:	3e9da6c07e7a6687d8f3dec3b28a6657
 URL:		http://www.kde.org/
 BuildRequires:	Qt5Core-devel
 BuildRequires:	Qt5Core-devel >= %{qtver}
@@ -93,8 +93,8 @@ rm -rf $RPM_BUILD_ROOT
 %files -f %{kaname}.lang
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_bindir}/kwalletmanager5
-%{_libdir}/qt5/plugins/kcm_kwallet5.so
 %attr(755,root,root) %{_libexecdir}/kauth/kcm_kwallet_helper5
+%attr(755,root,root) %{_libdir}/qt5/plugins/plasma/kcms/systemsettings_qwidgets/kcm_kwallet5.so
 %{_desktopdir}/kwalletmanager5-kwalletd.desktop
 %{_desktopdir}/org.kde.kwalletmanager5.desktop
 %{_datadir}/dbus-1/system-services/org.kde.kcontrol.kcmkwallet5.service
@@ -111,7 +111,6 @@ rm -rf $RPM_BUILD_ROOT
 %{_iconsdir}/hicolor/48x48/apps/kwalletmanager2.png
 %{_iconsdir}/hicolor/64x64/apps/kwalletmanager.png
 %{_iconsdir}/hicolor/64x64/apps/kwalletmanager2.png
-%{_datadir}/kservices5/kwalletconfig5.desktop
 %{_datadir}/kservices5/kwalletmanager5_show.desktop
 %{_datadir}/metainfo/org.kde.kwalletmanager5.appdata.xml
 %{_datadir}/polkit-1/actions/org.kde.kcontrol.kcmkwallet5.policy
